@@ -1,0 +1,3 @@
+[submodule "planningalerts_xml_feed"]
+	path = planningalerts_xml_feed
+	url = https://github.com/planningalerts-scrapers/planningalerts_xml_feed.git

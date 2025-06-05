@@ -4,6 +4,14 @@ require 'date'
 
 agent = Mechanize.new
 
+if ENV["MORPH_AUSTRALIAN_PROXY"]
+  # On morph.io set the environment variable MORPH_AUSTRALIAN_PROXY to
+  # http://morph:password@au.proxy.oaf.org.au:8888 replacing password with
+  # the real password.
+  puts "Using Australian proxy..."
+  agent.agent.set_proxy(ENV["MORPH_AUSTRALIAN_PROXY"])
+end
+
 base_url = 'https://onlineservice.launceston.tas.gov.au/eProperty/P1/PublicNotices/PublicNoticeDetails.aspx'
 public_notices_url = base_url + '?r=P1.LCC.WEBGUEST&f=%24P1.ESB.PUBNOTAL.ENQ'
 public_notice_details_url = base_url + '?r=P1.LCC.WEBGUEST&f=%24P1.ESB.PUBNOT.VIW&ApplicationId='

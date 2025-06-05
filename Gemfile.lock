@@ -1,0 +1,87 @@
+GIT
+  remote: https://github.com/openaustralia/scraperwiki-ruby.git
+  revision: fc50176812505e463077d5c673d504a6a234aa78
+  branch: morph_defaults
+  specs:
+    scraperwiki (3.0.1)
+      httpclient
+      sqlite_magic
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.7)
+      public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.3.0)
+    connection_pool (2.5.3)
+    domain_name (0.6.20240107)
+    http-cookie (1.0.8)
+      domain_name (~> 0.5)
+    httpclient (2.9.0)
+      mutex_m
+    logger (1.7.0)
+    mechanize (2.8.5)
+      addressable (~> 2.8)
+      domain_name (~> 0.5, >= 0.5.20190701)
+      http-cookie (~> 1.0, >= 1.0.3)
+      mime-types (~> 3.0)
+      net-http-digest_auth (~> 1.4, >= 1.4.1)
+      net-http-persistent (>= 2.5.2, < 5.0.dev)
+      nokogiri (~> 1.11, >= 1.11.2)
+      rubyntlm (~> 0.6, >= 0.6.3)
+      webrick (~> 1.7)
+      webrobots (~> 0.1.2)
+    mime-types (3.7.0)
+      logger
+      mime-types-data (~> 3.2025, >= 3.2025.0507)
+    mime-types-data (3.2025.0603)
+    mutex_m (0.3.0)
+    net-http-digest_auth (1.4.1)
+    net-http-persistent (4.0.6)
+      connection_pool (~> 2.2, >= 2.2.4)
+    nokogiri (1.15.7-aarch64-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.7-arm-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.7-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.7-x86-linux)
+      racc (~> 1.4)
+    nokogiri (1.15.7-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.15.7-x86_64-linux)
+      racc (~> 1.4)
+    public_suffix (6.0.2)
+    racc (1.8.1)
+    rubyntlm (0.6.5)
+      base64
+    sqlite3 (1.6.9-aarch64-linux)
+    sqlite3 (1.6.9-arm-linux)
+    sqlite3 (1.6.9-arm64-darwin)
+    sqlite3 (1.6.9-x86-linux)
+    sqlite3 (1.6.9-x86_64-darwin)
+    sqlite3 (1.6.9-x86_64-linux)
+    sqlite_magic (0.0.6)
+      sqlite3
+    webrick (1.9.1)
+    webrobots (0.1.2)
+
+PLATFORMS
+  aarch64-linux
+  arm-linux
+  arm64-darwin
+  x86-linux
+  x86_64-darwin
+  x86_64-linux
+
+DEPENDENCIES
+  mechanize (~> 2.8.5)
+  nokogiri (~> 1.15.0)
+  scraperwiki!
+  sqlite3 (~> 1.6.3)
+
+RUBY VERSION
+   ruby 3.2.2p53
+
+BUNDLED WITH
+   2.6.9

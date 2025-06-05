@@ -14,7 +14,7 @@ end
 
 base_url = 'https://onlineservice.launceston.tas.gov.au/eProperty/P1/PublicNotices/PublicNoticeDetails.aspx'
 public_notices_url = base_url + '?r=P1.LCC.WEBGUEST&f=%24P1.ESB.PUBNOTAL.ENQ'
-public_notice_details_url = base_url + '?r=P1.LCC.WEBGUEST&f=%24P1.ESB.PUBNOT.VIW&ApplicationId='
+public_notice_details_url = base_url + '?r=P1.LCC.WEBGUEST&f=%24P1.ESB.PUBNOT.VIW&rf=%24P1.ESB.PUBNOTAL.ENQ&ApplicationId='
 
 puts "Fetching public notices list from: #{public_notices_url}"
 page = agent.get(public_notices_url)
@@ -42,7 +42,7 @@ page.search('table.grid').each do |table|
       link = value_cell.at('a')
       next unless link
       record['council_reference'] = link.inner_text.strip
-      record['info_url'] = public_notice_details_url + record['council_reference']
+      record['info_url'] = public_notice_details_url + URI.encode_www_form_component(record['council_reference'])
     when 'Application Description'
       record['description'] = value_cell.inner_text.strip
     when 'Property Address'

@@ -35,21 +35,23 @@ GEM
       logger
       mime-types-data (~> 3.2025, >= 3.2025.0507)
     mime-types-data (3.2025.0603)
+    mini_portile2 (2.8.9)
     mutex_m (0.3.0)
     net-http-digest_auth (1.4.1)
     net-http-persistent (4.0.6)
       connection_pool (~> 2.2, >= 2.2.4)
-    nokogiri (1.15.7-aarch64-linux)
+    nokogiri (1.18.8)
+      mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
-    nokogiri (1.15.7-arm-linux)
+    nokogiri (1.18.8-aarch64-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.15.7-arm64-darwin)
+    nokogiri (1.18.8-arm-linux-gnu)
       racc (~> 1.4)
-    nokogiri (1.15.7-x86-linux)
+    nokogiri (1.18.8-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.7-x86_64-darwin)
+    nokogiri (1.18.8-x86_64-darwin)
       racc (~> 1.4)
-    nokogiri (1.15.7-x86_64-linux)
+    nokogiri (1.18.8-x86_64-linux-gnu)
       racc (~> 1.4)
     public_suffix (6.0.2)
     racc (1.8.1)
@@ -76,7 +78,7 @@ PLATFORMS
 
 DEPENDENCIES
   mechanize (~> 2.8.5)
-  nokogiri (~> 1.15.0)
+  nokogiri (~> 1.18.8)
   scraperwiki!
   sqlite3 (~> 1.6.3)
 

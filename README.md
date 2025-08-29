@@ -12,3 +12,5 @@ bundle exec ruby scraper.rb
 bundle exec rubocop
 ```
 
+Add any issues to https://github.com/planningalerts-scrapers/issues/issues
+

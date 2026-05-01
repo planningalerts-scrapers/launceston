@@ -12,6 +12,8 @@ if ENV["MORPH_AUSTRALIAN_PROXY"]
   agent.agent.set_proxy(ENV["MORPH_AUSTRALIAN_PROXY"])
 end
 
+agent.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
 base_url = "https://onlineservice.launceston.tas.gov.au/eProperty/P1/PublicNotices/PublicNoticeDetails.aspx"
 public_notices_url = base_url + "?r=P1.LCC.WEBGUEST&f=%24P1.ESB.PUBNOTAL.ENQ"
 public_notice_details_url = base_url + "?r=P1.LCC.WEBGUEST&f=%24P1.ESB.PUBNOT.VIW&rf=%24P1.ESB.PUBNOTAL.ENQ&ApplicationId="
